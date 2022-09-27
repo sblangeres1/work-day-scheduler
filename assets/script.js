@@ -59,10 +59,13 @@ function load(){
     var inputs = JSON.parse(localStorage.getItem('inputs'));
     saveData = inputs;
     console.log(saveData)
-    inputs.forEach(function(input){
-        var el = $('#' + input.id);
-        el.find('textarea').val(input.text);
-    });
+    if (inputs.length > 0){
+        inputs.forEach(function(input){
+            var el = $('#' + input.id);
+            el.find('textarea').val(input.text);
+        });
+    }
+    
     //Getting rid of empty datasaves on page refresh
     for(var i = 0; i < saveData.length; i++){
         if (saveData[i].text.trim().length < 1){

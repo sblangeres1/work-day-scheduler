@@ -9,4 +9,4 @@ even if you leave the site.
 ## Deployed Page
 [URL Of Deployed Application]()
 
-![Screenshot](siteSS.png)
+![Screenshot](./assets/siteSS.png)
