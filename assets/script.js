@@ -57,10 +57,10 @@ function createHours(){
 //Loading all saved data
 function load(){
     var inputs = JSON.parse(localStorage.getItem('inputs'));
-    saveData = inputs;
     console.log(inputs)
     //Checking to make sure there is items in local storage
     if (inputs != null){
+        saveData = inputs;
         inputs.forEach(function(input){
             var el = $('#' + input.id);
             el.find('textarea').val(input.text);
