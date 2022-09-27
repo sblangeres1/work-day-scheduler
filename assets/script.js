@@ -58,8 +58,8 @@ function createHours(){
 function load(){
     var inputs = JSON.parse(localStorage.getItem('inputs'));
     saveData = inputs;
-    console.log(saveData.length)
-    if (inputs.length > 0){
+    console.log(inputs)
+    if (inputs.length != null){
         inputs.forEach(function(input){
             var el = $('#' + input.id);
             el.find('textarea').val(input.text);
