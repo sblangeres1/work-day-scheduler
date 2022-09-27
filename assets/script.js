@@ -86,11 +86,14 @@ $('.saveBtn').on("click", function(event){
     var textInput = rowEl.find("textarea").val();
     var thisId = $(this).parents('.time-block').attr('id');
     //removing old data saves for same hour
-    for(var i = 0; i < saveData.length; i++){
-        if (thisId == saveData[i].id){
-            saveData.splice(i,1);
+    if (saveData != null){
+        for(var i = 0; i < saveData.length; i++){
+            if (thisId == saveData[i].id){
+                saveData.splice(i,1);
+            }
         }
     }
+    
     saveData.push({id: thisId, text: textInput})
     localStorage.setItem('inputs', JSON.stringify(saveData));
 })
