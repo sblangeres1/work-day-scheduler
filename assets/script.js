@@ -60,7 +60,7 @@ function load(){
     saveData = inputs;
     console.log(inputs)
     //Checking to make sure there is items in local storage
-    if (inputs.length != null){
+    if (inputs != null){
         inputs.forEach(function(input){
             var el = $('#' + input.id);
             el.find('textarea').val(input.text);
