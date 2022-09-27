@@ -58,7 +58,7 @@ function createHours(){
 function load(){
     var inputs = JSON.parse(localStorage.getItem('inputs'));
     saveData = inputs;
-    console.log(saveData)
+    console.log(saveData.length)
     if (inputs.length > 0){
         inputs.forEach(function(input){
             var el = $('#' + input.id);
