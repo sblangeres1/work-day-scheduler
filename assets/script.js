@@ -65,14 +65,15 @@ function load(){
             var el = $('#' + input.id);
             el.find('textarea').val(input.text);
         });
+        for(var i = 0; i < saveData.length; i++){
+            if (saveData[i].text.trim().length < 1){
+                saveData.splice(i, 1);
+            }
+        }
     }
     
     //Getting rid of empty datasaves on page refresh
-    for(var i = 0; i < saveData.length; i++){
-        if (saveData[i].text.trim().length < 1){
-            saveData.splice(i, 1);
-        }
-    }
+    
 }
 
 
